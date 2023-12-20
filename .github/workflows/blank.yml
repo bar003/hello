@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+-co# This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -43,7 +43,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: scp -o "StrictHostKeyChecking no" 'bar003-hello-frpoyig1kja#NZ11.WcWTg6zeytr2NCwNhLRpXWJxuKu@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io':/workspace/hello
+      - run: scp -o "StrictHostKeyChecking no" docker-compose.yml 'bar003-hello-frpoyig1kja#NZ11.WcWTg6zeytr2NCwNhLRpXWJxuKu@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io':/workspace/hello
       - run: ssh -o "StrictHostKeyChecking no" 'bar003-hello-frpoyig1kja#NZ11.WcWTg6zeytr2NCwNhLRpXWJxuKu@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io' "cd /workspace/hello && docker compose pull && docker-compose up -d"
       
         
