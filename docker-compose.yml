@@ -1,5 +1,5 @@
 services:
-	node:
-		image: node:latest
- 	python:
-    		image: python:latest
+  node:
+	image: node:latest
+  python:
+    	image: python:latest
