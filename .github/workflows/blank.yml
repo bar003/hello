@@ -43,6 +43,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker compose up -d
-      
+      - run: ssh -o "StrictHostKeyChecking no" ssh 'bar003-hello-frpoyig1kja@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io' "cd /workspace/nke-template && docker compose pull && docker-compose up -d"
+      - run: scp -o "StrictHostKeyChecking no" docker-compose.yml:/workspace/nke-template
         
