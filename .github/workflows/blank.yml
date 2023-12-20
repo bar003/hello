@@ -43,6 +43,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: ssh -o "StrictHostKeyChecking no" 'bar003-hello-frpoyig1kja#NZ11.WcWTg6zeytr2NCwNhLRpXWJxuKu@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io' "cd /workspace/hello && docker compose pull && docker-compose up -d"
       - run: scp -o "StrictHostKeyChecking no" docker-compose.yml:/workspace/hello
+      - run: ssh -o "StrictHostKeyChecking no" 'bar003-hello-frpoyig1kja#NZ11.WcWTg6zeytr2NCwNhLRpXWJxuKu@bar003-hello-frpoyig1kja.ssh.ws-eu107.gitpod.io' "cd /workspace/hello && docker compose pull && docker-compose up -d"
+      
         
