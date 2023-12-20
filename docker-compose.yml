@@ -1,5 +1,5 @@
 services:
 	python:
-		image: ghcr.io/bar003/380python-app:1.0 .
+		image: ghcr.io/bar003/380python-app:1.0
 	node:
-		image: ghcr.io/bar003/380node-app:1.0 .
+		image: ghcr.io/bar003/380node-app:1.0
